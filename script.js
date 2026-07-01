@@ -6,15 +6,15 @@
 let currentPage = 0;
 
 const audioFiles = {
-    welcome : "audio/pa/shubh_Welcome.mp3",
+    welcome : "shubh_Welcome.mp3",
 
-    enIntro : "audio/pa/Eng_1st.mp3",
-    hiIntro : "audio/pa/Hindi_1st.mp3",
-    paIntro : "audio/pa/shubh_tts_audio.mp3",
+    enIntro : "Eng_1st.mp3",
+    hiIntro : "Hindi_1st.mp3",
+    paIntro : "shubh_tts_audio.mp3",
 
-    enManual : "audio/pa/Eng_2nd.mp3",
-    hiManual : "audio/pa/Hindi_2nd.mp3",
-    paManual : "audio/pa/shubh_manual_audio.mp3"
+    enManual : "Eng_2nd.mp3",
+    hiManual : "Hindi_2nd.mp3",
+    paManual : "shubh_manual_audio.mp3"
 };
 
 const slider = document.getElementById("slider");
