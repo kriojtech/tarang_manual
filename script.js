@@ -299,3 +299,53 @@ document.getElementById("backBtn").onclick = function () {
     showPage();
 
 };
+
+// ================================
+// MOBILE SWIPE SUPPORT
+// ================================
+
+let touchStartX = 0;
+let touchEndX = 0;
+
+const viewport = document.getElementById("viewport");
+
+viewport.addEventListener("touchstart", function(e){
+
+    touchStartX = e.changedTouches[0].screenX;
+
+}, {passive:true});
+
+viewport.addEventListener("touchend", function(e){
+
+    touchEndX = e.changedTouches[0].screenX;
+
+    handleSwipe();
+
+}, {passive:true});
+
+function handleSwipe(){
+
+    const distance = touchEndX - touchStartX;
+
+    if(Math.abs(distance) < 60)
+        return;
+
+    if(distance < 0){
+
+        currentPage++;
+
+        if(currentPage > 3)
+            currentPage = 0;
+
+    }else{
+
+        currentPage--;
+
+        if(currentPage < 0)
+            currentPage = 3;
+
+    }
+
+    showPage();
+
+}
